@@ -58,11 +58,11 @@ namespace ScrabbleProject.Objects
     //   Assert.Equal(thaWordsScore, testWord.ScrabbleScoring(thaWords));
     // }
     [Fact]
-    public void ScrabbleScoring_CheckValidWord_false()
+    public void ScrabbleWording_CheckValidWord_false()
     {
-      string thaWords = "pantoings";
+      string thaWords = "pants";
       Scrabble testWord = new Scrabble();
-      Assert.Equal(false, testWord.ScrabbleScoring(thaWords));
+      Assert.Equal(false, testWord.SearchForWord(thaWords));
     }
   }
 }

@@ -1,6 +1,8 @@
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using Newtonsoft.Json;
 
 namespace ScrabbleProject.Objects
 {
@@ -50,5 +52,29 @@ namespace ScrabbleProject.Objects
       }
       return sum;
     }
+
+
+    // public void LoadJson(List<string> words)
+    // {
+    //   using (StreamReader r = new StreamReader("words.json"))
+    //   {
+    //     string json = r.ReadToEnd();
+    //     words = JsonConvert.DeserializeObject<List<string>>(json);
+    //   }
+    // }
+    //
+    // public bool SearchForWord(string userInput)
+    // {
+    //   List<string> words = new List<string>{};
+    //   this.LoadJson(words);
+    //   Console.WriteLine(words);
+    //   string wordToTest = userInput;
+    //   Console.WriteLine(wordToTest);
+    //   bool isRealWord = words.Contains(wordToTest);
+    //
+    //   Console.WriteLine(isRealWord);
+    //   return isRealWord;
+    // }
+
   }
 }
