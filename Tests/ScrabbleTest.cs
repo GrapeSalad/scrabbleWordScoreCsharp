@@ -39,5 +39,14 @@ namespace ScrabbleProject.Objects
       Scrabble testWord = new Scrabble();
       Assert.Equal(thaWordsAsArray, testWord.ScrabbleScoring(thaWords));
     }
+
+    [Fact]
+    public void ScrabbleScoring_ConvertToValue_true()
+    {
+      string thaWords = "pants";
+      char[] thaWordsCharValueArray = { '3', '1', '1', '1', '1' };
+      Scrabble testWord = new Scrabble();
+      Assert.Equal(thaWordsCharValueArray, testWord.ScrabbleScoring(thaWords));
+    }
   }
 }
