@@ -14,7 +14,7 @@ namespace ScrabbleProject.Objects
 
     public char[] ScrabbleScoring(string userInput)
     {
-      char[] arrayInput = userInput.ToCharArray();
+      char[] arrayInput = userInput.Replace(" ", "").ToCharArray();
       Console.WriteLine(arrayInput);
       return arrayInput;
     }
