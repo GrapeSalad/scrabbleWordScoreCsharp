@@ -21,5 +21,14 @@ namespace ScrabbleProject.Objects
       Scrabble testWord = new Scrabble();
       Assert.Equal(thaWordsAsArray, testWord.ScrabbleScoring(thaWords));
     }
+
+    [Fact]
+    public void ScrabbleScoring_RemoveSpaces_true()
+    {
+      string thaWords = "pants pants";
+      char[] thaWordsAsArray = { 'p', 'a', 'n', 't', 's','p', 'a', 'n', 't', 's' };
+      Scrabble testWord = new Scrabble();
+      Assert.Equal(thaWordsAsArray, testWord.ScrabbleScoring(thaWords));
+    }
   }
 }
