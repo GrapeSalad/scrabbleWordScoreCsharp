@@ -12,6 +12,9 @@ namespace ScrabbleProject.Objects
     //   _userInput = userInput;
     // }
 
-    
+    public bool ScrabbleScoring(string userInput)
+    {
+      return true;
+    }
   }
 }
