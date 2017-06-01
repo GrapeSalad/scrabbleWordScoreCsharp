@@ -12,9 +12,11 @@ namespace ScrabbleProject.Objects
     //   _userInput = userInput;
     // }
 
-    public bool ScrabbleScoring(string userInput)
+    public string ScrabbleScoring(string userInput)
     {
-      return true;
+      char[] arrayInput = userInput.ToCharArray();
+      Console.WriteLine(arrayInput);
+      return arrayInput.ToString();
     }
   }
 }
