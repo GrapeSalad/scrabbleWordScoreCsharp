@@ -13,44 +13,49 @@ namespace ScrabbleProject.Objects
     //   _userInput = userInput;
     // }
 
-    public List<char> ScrabbleScoring(string userInput)
+    public int ScrabbleScoring(string userInput)
     {
       string fixedUserInput = Regex.Replace(userInput, @"[^\w]", "");
       char[] arrayInput = fixedUserInput.ToCharArray();
       Console.WriteLine(arrayInput);
-      List<char> newList = new List<char> {};
+      List<int> newList = new List<int> {};
       for(int i = 0; i < arrayInput.Length; i++)
       {
         if((arrayInput[i] == 'q') || (arrayInput[i] == 'z'))
         {
-          newList.Add('9');
+          newList.Add(9);
         }
         else if((arrayInput[i] == 'd') || (arrayInput[i] == 'g'))
         {
-         newList.Add('2');
+         newList.Add(2);
         }
         else if((arrayInput[i] == 'b') || (arrayInput[i] == 'c') || (arrayInput[i] == 'm') || (arrayInput[i] == 'p'))
         {
-         newList.Add('3');
+         newList.Add(3);
         }
         else if((arrayInput[i] == 'f') || (arrayInput[i] == 'h') || (arrayInput[i] == 'v') || (arrayInput[i] == 'w') || (arrayInput[i] == 'y'))
         {
-        newList.Add('4');
+        newList.Add(4);
         }
         else if(arrayInput[i] == 'k')
         {
-         newList.Add('5');
+         newList.Add(5);
         }
         else if((arrayInput[i] == 'j') || (arrayInput[i] == 'x'))
         {
-         newList.Add('8');
+         newList.Add(8);
         }
         else
         {
-          newList.Add('1');
+          newList.Add(1);
         }
       }
-      return newList;
+      int sum = 0;
+      for(int i = 0; i < newList.Count; i++)
+      {
+        sum += newList[i];
+      }
+      return sum;
     }
   }
 }
