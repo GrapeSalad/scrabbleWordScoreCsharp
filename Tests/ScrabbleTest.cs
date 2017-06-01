@@ -57,12 +57,12 @@ namespace ScrabbleProject.Objects
     //   Scrabble testWord = new Scrabble();
     //   Assert.Equal(thaWordsScore, testWord.ScrabbleScoring(thaWords));
     // }
-    [Fact]
-    public void ScrabbleWording_CheckValidWord_false()
-    {
-      string thaWords = "pants";
-      Scrabble testWord = new Scrabble();
-      Assert.Equal(false, testWord.SearchForWord(thaWords));
-    }
+    // [Fact]
+    // public void ScrabbleWording_CheckValidWord_false()
+    // {
+    //   string thaWords = "pants";
+    //   Scrabble testWord = new Scrabble();
+    //   Assert.Equal(false, testWord.SearchForWord(thaWords));
+    // }
   }
 }
