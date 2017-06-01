@@ -41,13 +41,21 @@ namespace ScrabbleProject.Objects
     //   Assert.Equal(thaWordsAsArray, testWord.ScrabbleScoring(thaWords));
     // }
 
+    // [Fact]
+    // public void ScrabbleScoring_ConvertToValue_true()
+    // {
+    //   string thaWords = "pants";
+    //   List<char> thaWordsList = new List<char>{'3', '1', '1', '1', '1'};
+    //   Scrabble testWord = new Scrabble();
+    //   Assert.Equal(thaWordsList, testWord.ScrabbleScoring(thaWords));
+    // }
     [Fact]
-    public void ScrabbleScoring_ConvertToValue_true()
+    public void ScrabbleScoring_CheckScore_true()
     {
       string thaWords = "pants";
-      List<char> thaWordsList = new List<char>{'3', '1', '1', '1', '1'};
+      int thaWordsScore = 7;
       Scrabble testWord = new Scrabble();
-      Assert.Equal(thaWordsList, testWord.ScrabbleScoring(thaWords));
+      Assert.Equal(thaWordsScore, testWord.ScrabbleScoring(thaWords));
     }
   }
 }
